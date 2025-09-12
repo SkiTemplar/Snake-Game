@@ -9,7 +9,10 @@ find_package(OpenGL REQUIRED)
 
 add_executable(Snake src/main.cpp
         src/App.cpp
-        src/App.h)
+        src/App.h
+        src/Game.cpp
+        src/Game.h
+        src/Types.h)
 
 target_link_libraries(Snake PRIVATE glfw glm::glm glad::glad opengl32)
 

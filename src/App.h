@@ -1,33 +1,35 @@
-//
-// Created by Rodrigo on 11/09/2025.
-//
-
-#ifndef SNAKE_APP_H
-#define SNAKE_APP_H
 #pragma once
-#include "config.h"
-#include <iostream>
-
+#include <GLFW/glfw3.h>
+class Game;
 
 class App {
 public:
-    App(int width, int height, const char *title);
-
+    App(int width, int height, const char* title);
     ~App();
 
-    bool init(); //Inicializar GLFW y GLAD
-    void run(); //Bucle principal
+    bool init();
+    void run();
+
 private:
     GLFWwindow* window;
     int winW, winH;
     const char* winTitle;
+
+    // tiempo/tick
+    double lastTime = 0.0;
+    double acc = 0.0;
+    const double TICK = 1.0/12.0;
+
+    // juego
+    Game* game = nullptr;
 
     bool initGLFW();
     bool initGLAD();
     void logGLInfo();
     void configureBaseGLState();
     void mainLoop();
+
+    // input
+    static void keyCallback(GLFWwindow* w, int key, int scancode, int action, int mods);
+    void handleKey(int key, int action);
 };
-
-
-#endif //SNAKE_APP_H

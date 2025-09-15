@@ -1,0 +1,22 @@
+SNAKE OpenGL 3.3 - README
+Hecho por Rodrigo Fernández Carnicer - 15/09/2025
+
+Proyecto inicial del famoso juego del Snake en C++ con OpenGL 3.3 Core.
+
+Características:
+- Bucle con timestep fijo (12Hz)
+- División de la lógica del juego y la visualización.
+- Render 2D básico.
+- Modos de borde (Con o sin paredes).
+- Puntuación y estado del título de la ventana.
+- Fondo de rejilla para comodidad visual.
+
+CONTROLES:
+
+- MOVIMIENTO: FLECHAS.
+- REINICIAR: R.
+- ALTERNAR MODO: M.
+- CIERRE DE VENTANA: Salir.
+
+
+
